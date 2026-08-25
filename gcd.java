@@ -1,13 +1,11 @@
 public class gcd {
     public static int gcd(int a, int b){
-        int big = Math.max(a,b);
-        int min = Math.min(a,b);
-        while(big%min != 0){
-            int rem = big%min;
-            big = min;
-            min = rem;
+        while(b!= 0){
+            int rem = a%b;
+            a = b;
+            b = rem;
         }
-        return min;
+        return a;
     }
     
     public static void main(String[] args){
